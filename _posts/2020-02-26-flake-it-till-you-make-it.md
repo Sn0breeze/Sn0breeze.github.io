@@ -33,3 +33,8 @@ A soulful notion of success rests on the actualization of our innate image. Succ
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+
+
+
+
+<div id="ww_69bfad2ce4212" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl549"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/calgary/30_days/" id="ww_69bfad2ce4212_u" target="_blank">Weather forecast Calgary 30 days</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_69bfad2ce4212"></script>
