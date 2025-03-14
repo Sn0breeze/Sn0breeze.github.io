@@ -16,7 +16,7 @@
         js.onload = function() {
             const widget = document.createElement('div');
             widget.className = 'tomorrow';
-            widget.setAttribute('data-location-id', '016166');
+            widget.setAttribute('data-location-id', '016166');  // Single location ID
             widget.setAttribute('data-language', 'EN');
             widget.setAttribute('data-unit-system', 'METRIC');
             widget.setAttribute('data-skin', 'dark');
@@ -42,7 +42,7 @@
             link.appendChild(img);
             widget.appendChild(link);
 
-            d.body.appendChild(widget);
+            d.body.appendChild(widget); // Append the single widget
         };
     })(document, 'script', 'tomorrow-sdk');
 </script>
