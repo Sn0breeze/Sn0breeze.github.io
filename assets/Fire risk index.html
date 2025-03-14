@@ -14,35 +14,38 @@
         fjs.parentNode.insertBefore(js, fjs);
 
         js.onload = function() {
-            const widget = document.createElement('div');
-            widget.className = 'tomorrow';
-            widget.setAttribute('data-location-id', '016166');  // Single location ID
-            widget.setAttribute('data-language', 'EN');
-            widget.setAttribute('data-unit-system', 'METRIC');
-            widget.setAttribute('data-skin', 'dark');
-            widget.setAttribute('data-widget-type', 'fire');
-            widget.style.paddingBottom = '22px';
-            widget.style.position = 'relative';
+            // Only create the widget once the script is loaded
+            if (!d.querySelector('.tomorrow')) {  // Check if widget already exists
+                const widget = document.createElement('div');
+                widget.className = 'tomorrow';
+                widget.setAttribute('data-location-id', '016166');  // Single location ID
+                widget.setAttribute('data-language', 'EN');
+                widget.setAttribute('data-unit-system', 'METRIC');
+                widget.setAttribute('data-skin', 'dark');
+                widget.setAttribute('data-widget-type', 'fire');
+                widget.style.paddingBottom = '22px';
+                widget.style.position = 'relative';
 
-            const link = document.createElement('a');
-            link.href = 'https://www.tomorrow.io/weather-api/';
-            link.rel = 'nofollow noopener noreferrer';
-            link.target = '_blank';
-            link.style.position = 'absolute';
-            link.style.bottom = '0';
-            link.style.transform = 'translateX(-50%)';
-            link.style.left = '50%';
+                const link = document.createElement('a');
+                link.href = 'https://www.tomorrow.io/weather-api/';
+                link.rel = 'nofollow noopener noreferrer';
+                link.target = '_blank';
+                link.style.position = 'absolute';
+                link.style.bottom = '0';
+                link.style.transform = 'translateX(-50%)';
+                link.style.left = '50%';
 
-            const img = document.createElement('img');
-            img.alt = 'Powered by the Tomorrow.io Weather API';
-            img.src = 'https://weather-website-client.tomorrow.io/img/powered-by.svg';
-            img.width = 250;
-            img.height = 18;
+                const img = document.createElement('img');
+                img.alt = 'Powered by the Tomorrow.io Weather API';
+                img.src = 'https://weather-website-client.tomorrow.io/img/powered-by.svg';
+                img.width = 250;
+                img.height = 18;
 
-            link.appendChild(img);
-            widget.appendChild(link);
+                link.appendChild(img);
+                widget.appendChild(link);
 
-            d.body.appendChild(widget); // Append the single widget
+                d.body.appendChild(widget);  // Append the widget only once
+            }
         };
     })(document, 'script', 'tomorrow-sdk');
 </script>
